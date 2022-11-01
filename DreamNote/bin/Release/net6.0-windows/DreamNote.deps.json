@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "DreamNote/1.0.0": {
+        "dependencies": {
+          "HT.Encrypt": "6.0.6"
+        },
+        "runtime": {
+          "DreamNote.dll": {}
+        }
+      },
+      "HT.Encrypt/6.0.6": {
+        "runtime": {
+          "lib/netstandard2.1/HT.Encrypt.dll": {
+            "assemblyVersion": "6.0.6.0",
+            "fileVersion": "6.0.6.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DreamNote/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HT.Encrypt/6.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/PmdTx9cBr6C78UeIBAwFKgrsLPMRVf4MfljwO57Uq78G5piJgcKMBAHcMj353rMte1L4AJyf2pPrdym4OLk/Q==",
+      "path": "ht.encrypt/6.0.6",
+      "hashPath": "ht.encrypt.6.0.6.nupkg.sha512"
+    }
+  }
+}

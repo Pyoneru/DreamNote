@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Control\Entry.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Control\SymbolGroup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Control\SymbolGroupElement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Control\SymbolListItem.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EntryListWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EntryPasswordWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EntryWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SettingsWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SymbolListWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Control\Entry.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Control\SymbolGroup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Control\SymbolGroupElement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Control\SymbolListItem.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EntryListWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EntryPasswordWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EntryWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Icons.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\RadioButtonStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\ScrollBarStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SettingsWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SymbolListWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

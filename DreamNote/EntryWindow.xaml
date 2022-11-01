@@ -1,0 +1,170 @@
+﻿<Window x:Class="DreamNote.EntryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DreamNote"
+        xmlns:uc="clr-namespace:DreamNote.Control"
+        mc:Ignorable="d"
+        Width="1280"
+        Height="720"
+        Title="Dream Note"
+        Background="#2D2D2D">
+    <!--Main Grid-->
+    <Grid>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/> <!--Main section-->
+            <ColumnDefinition Width="400"/> <!--Symbol side section-->
+        </Grid.ColumnDefinitions>
+
+        <!--Main section-->
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"/> <!--Tile & Save button-->
+                <RowDefinition/> <!--Content-->
+                <RowDefinition Height="120"/> <!--Home button-->
+            </Grid.RowDefinitions>
+
+            <!--Title & Save button-->
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/> <!--Save button-->
+                    <ColumnDefinition/> <!--Title button-->
+                    <ColumnDefinition Width="50"/> <!--Padding-->
+                </Grid.ColumnDefinitions>
+
+                <!--Save button-->
+                <Button Grid.Column="0"
+                        Width="70"
+                        Height="70"
+                        VerticalAlignment="Top"
+                        Background="Transparent"
+                        BorderBrush="Transparent"
+                        Margin="0,35,0,0">
+                    <StackPanel>
+                         <Image Width="64" 
+                                Height="64" 
+                                Source="{StaticResource save}"/>
+                        <!-- The image is stored in Resources/Icons.xaml -->
+                    </StackPanel>
+                </Button>
+
+                <!--Title-->
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/> <!--Title--> 
+                        <RowDefinition Height="30"/> <!--Dashed line-->
+                    </Grid.RowDefinitions>
+                    
+                    <!--Title-->
+                    <TextBox x:Name="entry_title" Grid.Row="0"
+                               Text="Title"
+                               VerticalAlignment="Bottom"
+                               HorizontalAlignment="Center"
+                               Foreground="#FFFFFF"
+                               Background="#2D2D2D"
+                               BorderThickness="0"
+                               FontSize="32"
+                               Margin="0,0,0,10"/>
+
+                    <!--Dashed line-->
+                    <Rectangle Grid.Row="1" Stroke="#FFFFFF" Height="1" StrokeThickness="1" StrokeDashArray="4 4"                  SnapsToDevicePixels="True"
+                               Width="406"/>
+                </Grid>
+            </Grid>
+
+            <!--Content-->
+            <ScrollViewer Grid.Row="1"
+                      Margin="40,0,10,0">
+                <TextBox x:Name="entry_content"
+                    Foreground="#FFFFFF"
+                    Background="#2D2D2D"
+                    FontSize="19"
+                    TextWrapping="Wrap"
+                    BorderThickness="0"
+                    Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida lacus at fermentum congue. Proin nisl nulla, congue a fringilla vitae, consectetur a quam. Aliquam facilisis luctus porttitor. Vestibulum facilisis finibus ex at malesuada. Praesent pharetra sed justo vel porta. Proin non nisi et velit aliquam luctus in eget quam. Ut nisl nibh, maximus vestibulum enim eu, semper facilisis enim. Aenean tempus et lorem id tristique.
+
+Nullam at nibh quis odio sodales pretium. In vitae elit arcu. Vestibulum vel tellus in augue imperdiet interdum. Duis quis eleifend augue, quis dictum eros. Duis commodo ultricies faucibus. Suspendisse quis lectus arcu. Fusce vulputate scelerisque blandit. Pellentesque congue ligula imperdiet, semper est vitae, tempus metus. Donec molestie condimentum justo vel lobortis. Morbi nisi neque, eleifend in lacus non, accumsan placerat purus. Cras eget tellus interdum mi dictum vehicula vel ut leo.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida lacus at fermentum congue. Proin nisl nulla, congue a fringilla vitae, consectetur a quam. Aliquam facilisis luctus porttitor. Vestibulum facilisis finibus ex at malesuada. Praesent pharetra sed justo vel porta. Proin non nisi et velit aliquam luctus in eget quam. Ut nisl nibh, maximus vestibulum enim eu, semper facilisis enim. Aenean tempus et lorem id tristique.
+
+Nullam at nibh quis odio sodales pretium. In vitae elit arcu. Vestibulum vel tellus in augue imperdiet interdum. Duis quis eleifend augue, quis dictum eros. Duis commodo ultricies faucibus. Suspendisse quis lectus arcu. Fusce vulputate scelerisque blandit. Pellentesque congue ligula imperdiet, semper est vitae, tempus metus. Donec molestie condimentum justo vel lobortis. Morbi nisi neque, eleifend in lacus non, accumsan placerat purus. Cras eget tellus interdum mi dictum vehicula vel ut leo.
+
+
+
+"/>
+            </ScrollViewer>
+
+            <!--Home button-->
+            <Button Grid.Row="2"
+                Width="70"
+                Height="70"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Margin="0,0,0,0">
+                <StackPanel>
+                    <Image Width="64" 
+                       Height="64" 
+                       Source="{StaticResource home}"/>
+                    <!-- The image is stored in Resources/Icons.xaml -->
+                </StackPanel>
+            </Button>
+        </Grid>
+
+        <!--Symbol side section-->
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/> <!--Title-->
+                <RowDefinition/> <!--Content-->
+            </Grid.RowDefinitions>
+
+            <!--Title-->
+            <TextBlock Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Text="Symbols"
+                       FontSize="32"
+                       Foreground="#FFFFFF"/>
+            
+            <!--Content-->
+            <Border Grid.Row="1"
+                    Margin="30,30,30,30"
+                    CornerRadius="5,5,5,5"
+                    BorderThickness="1"
+                    BorderBrush="#3A3939"
+                    Background="#3A3939">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/> <!--List of symbols-->
+                        <RowDefinition Height="70"/> <!--Add button-->
+                    </Grid.RowDefinitions>
+
+                    <!--List of symbols-->
+                    <ScrollViewer Grid.Row="0">
+                        <StackPanel x:Name="entry_symbols">
+                            <StackPanel.Resources>
+                                <Style TargetType="{x:Type uc:SymbolListItem}">
+                                    <Setter Property="Margin" Value="0,5,0,5"/>
+                                </Style>
+                            </StackPanel.Resources>
+                        </StackPanel>
+                    </ScrollViewer>
+
+                    <Button Grid.Row="1"
+                            Width="48"
+                            Height="48"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            VerticalAlignment="Top">
+                        <StackPanel>
+                            <Image Width="42" 
+                                   Height="42" 
+                                   Source="{StaticResource plus}"/>
+                            <!-- The image is stored in Resources/Icons.xaml -->
+                        </StackPanel>
+                    </Button>
+                </Grid>
+            </Border>
+
+        </Grid>
+    </Grid>
+</Window>

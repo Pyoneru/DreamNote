@@ -1,0 +1,80 @@
+﻿<Window x:Class="DreamNote.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DreamNote"
+        mc:Ignorable="d"
+        Width="480"
+        Height="640"
+        Title="Dream Note"
+        Background="#2D2D2D">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="170"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!--Strategy settings-->
+        <!--Rounded background-->
+        <Border Grid.Row="1"
+                Margin="20,20,20,20"
+                CornerRadius="5,5,5,5"
+                BorderThickness="1"
+                BorderBrush="#353535"
+                >
+            <Grid Background="#353535">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <!--Title: Strategy-->
+                <TextBlock Grid.Row="0"
+                           Text="Strategy"
+                           VerticalAlignment="Center"
+                           FontSize="19"
+                           Foreground="#FFED4E"
+                           Margin="10,0,0,0"/>
+
+                <!--Type selector of encoder-->
+                <StackPanel Grid.Row="1" Margin="0,10,0,0">
+                    <RadioButton Name="rb1" Checked="rb1_Checked">per entry</RadioButton>
+                    <RadioButton Name="rb2">per app</RadioButton>
+                    <RadioButton Name="rb3">none</RadioButton>
+                </StackPanel>
+
+            </Grid>
+        </Border>
+
+        <!--Title: Encoder-->
+        <TextBlock
+            Grid.Row="0"
+            Text="Encoder"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            FontSize="24"
+            Foreground="#E7E7E7"/>
+        
+        <!--Dashed line, effect for separate different type of settings-->
+        <Rectangle Grid.Row="2" Stroke="#FFFFFF" Height="1" StrokeThickness="1" StrokeDashArray="4 4"                  SnapsToDevicePixels="True"/>
+        
+        <!--Link to the main view-->
+        <Button Grid.Row="6"
+                Width="70"
+                Height="70"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Margin="0,150,0,0">
+            <StackPanel>
+                <Image Width="64" 
+                       Height="64" 
+                       Source="{StaticResource home}"/>
+                <!-- The image is stored in Resources/Icons.xaml -->
+            </StackPanel>
+        </Button>
+
+    </Grid>
+</Window>

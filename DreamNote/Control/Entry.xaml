@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="DreamNote.Control.Entry"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DreamNote.Control"
+             mc:Ignorable="d"
+             Width="90"
+             Height="132"
+             d:DesignHeight="132" d:DesignWidth="90">
+    <Button
+        Background="Transparent"
+        BorderBrush="Transparent"
+        Margin="0,0,0,0"
+        Click="Button_Click">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <!--Date-->
+        <TextBlock x:Name="entry_date"
+                   Grid.Row="0"
+                   Text="27.10.2022"
+                   HorizontalAlignment="Center"
+                   Foreground="#E7E7E7"
+                   FontSize="14.14"/>
+        <!--Image-->
+        <StackPanel Grid.Row="1">
+            <Image Source="{StaticResource entry}"/> <!-- The image is stored in Resources/Icons.xaml-->
+        </StackPanel>
+        <!--Title of an entry-->
+        <TextBlock x:Name="entry_title"
+                   Grid.Row="2"
+                   Text="Entry"
+                   HorizontalAlignment="Center"
+                   Foreground="#E7E7E7"
+                   FontSize="18.86" Margin="0,-4,0,0"/>
+    </Grid>
+    </Button>
+</UserControl>
