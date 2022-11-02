@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\piotr\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\piotr\\.nuget\\packages"
+      "C:\\Users\\Admin\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Admin\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

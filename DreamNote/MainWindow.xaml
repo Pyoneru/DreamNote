@@ -139,7 +139,8 @@
                     </Style>
                 </StackPanel.Resources>
                 <!--The Entry control is described in Control/Entry.xaml-->
-                <uc:Entry Grid.Row="1"/>
+                <uc:Entry MouseDoubleClick="Entry_MouseDoubleClick"
+                          Grid.Row="1"/>
                 <uc:Entry Grid.Row="1"/>
                 <uc:Entry Grid.Row="1"/>
                 <uc:Entry Grid.Row="1"/>

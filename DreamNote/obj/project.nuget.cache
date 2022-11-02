@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "GZ+1OgE86Ef+oo2y9CRCYiqHsqWGtRwLtpNGU4BDkoEVVO6GrY2XEtyY2AncGRL7IaCoB4CKOQP9a2CwVvq8oQ==",
+  "dgSpecHash": "6IzpItiMLhlhLMcMQXTlJOMSJZGbAMbiWm6Guqyum7pA1dZ8uNMfr2v89CI6f1+HH9AoSC1Q78gd2TmFYH9EjA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\piotr\\source\\repos\\DreamNote\\DreamNote\\DreamNote.csproj",
+  "projectFilePath": "D:\\Piotr\\DreamNote\\DreamNote\\DreamNote.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\piotr\\.nuget\\packages\\ht.encrypt\\6.0.6\\ht.encrypt.6.0.6.nupkg.sha512"
+    "C:\\Users\\Admin\\.nuget\\packages\\ht.encrypt\\6.0.6\\ht.encrypt.6.0.6.nupkg.sha512"
   ],
   "logs": []
 }

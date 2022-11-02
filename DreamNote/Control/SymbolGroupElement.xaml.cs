@@ -64,10 +64,8 @@ namespace DreamNote.Control
 
         private void Button_entry(object sender, RoutedEventArgs e)
         {
-            EntryWindow entryWindow = new EntryWindow(this.refEntry);
-            App.Current.MainWindow = entryWindow;
-            entryWindow.Show();
-            parent.Close();
+            EntryPasswordWindow window = new EntryPasswordWindow(parent, refEntry);
+            window.Show();
         }
     }
 }

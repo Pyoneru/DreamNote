@@ -43,19 +43,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\piotr\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\piotr\\source\\repos\\DreamNote\\DreamNote\\DreamNote.csproj",
+      "projectUniqueName": "D:\\Piotr\\DreamNote\\DreamNote\\DreamNote.csproj",
       "projectName": "DreamNote",
-      "projectPath": "C:\\Users\\piotr\\source\\repos\\DreamNote\\DreamNote\\DreamNote.csproj",
-      "packagesPath": "C:\\Users\\piotr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\piotr\\source\\repos\\DreamNote\\DreamNote\\obj\\",
+      "projectPath": "D:\\Piotr\\DreamNote\\DreamNote\\DreamNote.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "D:\\Piotr\\DreamNote\\DreamNote\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\piotr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -105,7 +105,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

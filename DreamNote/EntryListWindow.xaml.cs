@@ -66,10 +66,8 @@ namespace DreamNote
         {
             Entry entry = C.Entries[((int)(sender as Button).Tag)];
 
-            EntryWindow entryWindow = new EntryWindow(entry);
-            App.Current.MainWindow = entryWindow;
-            entryWindow.Show();
-            this.Close();
+            EntryPasswordWindow window = new EntryPasswordWindow(this, entry);
+            window.Show();
         }
 
         private void Button_Home(object sender, RoutedEventArgs e)

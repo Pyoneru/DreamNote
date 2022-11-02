@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\piotr\source\repos\DreamNote\DreamNote\obj\Debug\net6.0-windows\
+D:\Piotr\DreamNote\DreamNote\obj\Debug\net6.0-windows\
 DreamNote
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\piotr\source\repos\DreamNote\DreamNote\App.xaml
-12-72390741
-1-727211750
-24439341044
-1951380176659
-Control\Entry.xaml;Control\SymbolGroup.xaml;Control\SymbolGroupElement.xaml;Control\SymbolListItem.xaml;EntryListWindow.xaml;EntryWindow.xaml;MainWindow.xaml;Resources\Icons.xaml;Resources\RadioButtonStyle.xaml;Resources\ScrollBarStyle.xaml;SettingsWindow.xaml;SymbolListWindow.xaml;
+D:\Piotr\DreamNote\DreamNote\App.xaml
+13673320318
+11959550899
+25-1772648589
+195-965790060
+Control\Entry.xaml;Control\SymbolGroup.xaml;Control\SymbolGroupElement.xaml;Control\SymbolListItem.xaml;EntryListWindow.xaml;EntryPasswordWindow.xaml;EntryWindow.xaml;MainWindow.xaml;Resources\Icons.xaml;Resources\RadioButtonStyle.xaml;Resources\ScrollBarStyle.xaml;SettingsWindow.xaml;SymbolListWindow.xaml;
 
 False
 
