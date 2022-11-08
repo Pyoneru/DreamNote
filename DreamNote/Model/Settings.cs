@@ -17,6 +17,7 @@ namespace DreamNote.Model
 
         public EncoderType Encoder { get; set; }
 
-        public bool HasPassowrd => Encoder != EncoderType.NONE;
+        //public bool HasPassowrd => Encoder != EncoderType.NONE;
+        public bool HasPassowrd  {get; set;}
     }
 }

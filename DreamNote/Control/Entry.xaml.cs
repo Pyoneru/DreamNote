@@ -22,8 +22,6 @@ namespace DreamNote.Control
         public Entry()
         {
             InitializeComponent();
-            
-
         }
 
         public void SetEntry(Model.Entry entry, Window window)

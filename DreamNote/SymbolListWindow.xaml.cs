@@ -29,7 +29,8 @@ namespace DreamNote
 
         private void ClearSymbols()
         {
-            panelEntryList.Children.Clear();
+            if(panelEntryList != null)
+                panelEntryList.Children.Clear();
         }
 
         private void InitializeSymbols()
@@ -57,7 +58,14 @@ namespace DreamNote
 
         private void SearchSymbols(object sender, TextChangedEventArgs e)
         {
-            if (!string.IsNullOrEmpty(search_bar.Text)) {
+            SearchSymbolByName();
+        }
+
+        public void SearchSymbolByName()
+        {
+            ClearSymbols();
+            if (!string.IsNullOrEmpty(search_bar.Text))
+            {
                 List<Symbol> symbols = new List<Symbol>();
                 foreach (Symbol symbol in C.Symbols)
                 {

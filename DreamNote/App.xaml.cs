@@ -9,6 +9,7 @@ using System.Data;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 
@@ -25,6 +26,35 @@ namespace DreamNote
             base.OnStartup(e);
             Container container = Container.GetInstance();
             container.TextEncoder = new TextEncoder();
+            container.Settings = new Settings();
+            container.Settings.HasPassowrd = true;
+
+            //List<Entry> entries = new List<Entry>();
+            //string password = "dupa";
+            //Random random = new Random();
+            //for(int i = 0; i < 20; i++)
+            //{
+            //    Entry entry = new Entry();
+            //    entry.Title = RandomText(random.Next(10) + 5);
+            //    entry.Content = RandomText(random.Next(100) + 100);
+
+            //    int cSymbols = random.Next(5) + 1;
+            //    List<Symbol> symbols = new List<Symbol>();
+            //    for(int c = 0; c < cSymbols; c++)
+            //    {
+            //        symbols.Add(new Symbol(RandomText(random.Next(5) + 5)));
+            //    }
+            //    entry.Symbols = symbols;
+
+            //    entries.Add(entry);
+            //}
+            //EntryGenerator generator = new EntryGenerator(new TextEncoder());
+
+            //foreach (var entry in entries)
+            //{
+            //    generator.generate(entry, password);
+            //    Thread.Sleep(1000);
+            //}
 
             if(!Directory.Exists(container.EntryPath))
                 Directory.CreateDirectory(container.EntryPath);
@@ -56,6 +86,17 @@ namespace DreamNote
             //    // ToDo: Read settings
             //}
 
+        }
+
+        private string RandomText(int size)
+        {
+            Random random = new Random();
+            string chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+            string word = "";
+            for (int i = 0; i < size; i++)
+                word += chars[random.Next(chars.Length)];
+            return word;
         }
     }
 }

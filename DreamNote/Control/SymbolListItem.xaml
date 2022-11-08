@@ -22,7 +22,8 @@
         <Button x:Name="btn_delete"
                 Grid.Column="1"
                 Background="Transparent"
-                BorderBrush="Transparent">
+                BorderBrush="Transparent"
+                Click="Button_Remove">
             <StackPanel>
                 <Image Width="30" 
                        Height="5" 

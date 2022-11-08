@@ -26,8 +26,8 @@ namespace DreamNote.Control
 
         public void Set(Symbol symbol, Window window)
         {
-            SetSymbol(symbol);
             this.parent = window;
+            SetSymbol(symbol);
         }
 
 

@@ -12,8 +12,8 @@
         Click="Button_entry">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="194"/>
+            <ColumnDefinition Width="194"/>
         </Grid.ColumnDefinitions>
 
         <TextBlock x:Name="entry_title"
@@ -21,6 +21,8 @@
                    Text="Entry's title..."
                    Foreground="#FFFFFF"
                    FontSize="19"
+                   HorizontalAlignment="Left"
+                   TextAlignment="Left"
                    VerticalAlignment="Center"
                    Margin="5,0,0,0"/>
 
@@ -30,7 +32,8 @@
                    Foreground="#7B7B7B"
                    FontSize="19"
                    VerticalAlignment="Center"
-                   HorizontalAlignment="Right"/>
+                   HorizontalAlignment="Right"
+                   TextAlignment="Right"/>
     </Grid>
     </Button>
 </UserControl>

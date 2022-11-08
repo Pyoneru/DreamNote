@@ -20,7 +20,7 @@ namespace DreamNote.Generator
             C = Container.GetInstance();
         }
 
-        public bool generate(Entry entry, string password)
+        public string generate(Entry entry, string password)
         {
             XmlDocument xml = new XmlDocument();
 
@@ -39,7 +39,8 @@ namespace DreamNote.Generator
   
 
             var xmlHasPassword = xml.CreateElement("HasPassword");
-            xmlHasPassword.InnerText = C.Settings.HasPassowrd ? "true" : "false";
+            //xmlHasPassword.InnerText = C.Settings.HasPassowrd ? "true" : "false";
+            xmlHasPassword.InnerText = "true";
 
             var xmlContent = xml.CreateElement("Content");
             if (C.Settings.HasPassowrd)
@@ -57,17 +58,21 @@ namespace DreamNote.Generator
 
             xml.AppendChild(xmlEntry);
 
-            string filename = Path.Combine(C.EntryPath, DateFormater.NoFormat(DateTime.Now) + ".xml");
+            string filename = "";
+            if (!string.IsNullOrEmpty(entry.Path))
+                filename = entry.Path;
+            else
+                filename = Path.Combine(C.EntryPath, DateFormater.NoFormat(DateTime.Now) + ".entry.xml");
             try
             {
                 //MessageBox.Show(filename);
                 xml.Save(filename);
             }catch(Exception e)
             {
-                return false;
+                return "";
             }
 
-            return true;
+            return filename;
         }
 
         private XmlElement WrapSymbols(Entry entry, XmlDocument xml, string password)

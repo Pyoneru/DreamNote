@@ -44,7 +44,9 @@
                     Background="Transparent"
                     BorderBrush="Transparent"
                     Foreground="#E7E7E7"
-                    FontSize="19">
+                    FontSize="19"
+                    Click="Symbol_Menu_Button_Click"
+                    Tag="0">
                 <TextBlock x:Name="s00" Text="Symbol" />
             </Button>
             <Button Grid.Row="0" Grid.Column="1"
@@ -53,7 +55,9 @@
                     Background="Transparent"
                     BorderBrush="Transparent"
                     Foreground="#E7E7E7"
-                    FontSize="19">
+                    FontSize="19"
+                    Click="Symbol_Menu_Button_Click"
+                    Tag="1">
                 <TextBlock x:Name="s01" Text="Symbol" />
             </Button>
             <Button Grid.Row="0" Grid.Column="2"
@@ -62,7 +66,9 @@
                     Background="Transparent"
                     BorderBrush="Transparent"
                     Foreground="#E7E7E7"
-                    FontSize="19">
+                    FontSize="19"
+                    Click="Symbol_Menu_Button_Click"
+                    Tag="2">
                 <TextBlock x:Name="s02" Text="Symbol" />
             </Button>
             <Button Grid.Row="1" Grid.Column="0"
@@ -71,7 +77,9 @@
                     Background="Transparent"
                     BorderBrush="Transparent"
                     Foreground="#E7E7E7"
-                    FontSize="19">
+                    FontSize="19"
+                    Click="Symbol_Menu_Button_Click"
+                    Tag="3">
                 <TextBlock x:Name="s10" Text="Symbol" />
             </Button>
             <Button Grid.Row="1" Grid.Column="1"
@@ -80,7 +88,9 @@
                     Background="Transparent"
                     BorderBrush="Transparent"
                     Foreground="#E7E7E7"
-                    FontSize="19">
+                    FontSize="19"
+                    Click="Symbol_Menu_Button_Click"
+                    Tag="4">
                 <TextBlock x:Name="s11" Text="Symbol" />
             </Button>
             <Button Grid.Row="1" Grid.Column="2"
@@ -89,7 +99,9 @@
                     Background="Transparent"
                     BorderBrush="Transparent"
                     Foreground="#E7E7E7"
-                    FontSize="19">
+                    FontSize="19"
+                    Click="Symbol_Menu_Button_Click"
+                    Tag="5">
                 <TextBlock x:Name="s12" Text="Symbol" />
             </Button>
         </Grid>
@@ -139,8 +151,7 @@
                     </Style>
                 </StackPanel.Resources>
                 <!--The Entry control is described in Control/Entry.xaml-->
-                <uc:Entry MouseDoubleClick="Entry_MouseDoubleClick"
-                          Grid.Row="1"/>
+                <uc:Entry Grid.Row="1"/>
                 <uc:Entry Grid.Row="1"/>
                 <uc:Entry Grid.Row="1"/>
                 <uc:Entry Grid.Row="1"/>

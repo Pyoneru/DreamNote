@@ -23,21 +23,26 @@ namespace DreamNote.Control
     public partial class SymbolListItem : UserControl
     {
         public Symbol Symbol { get; set; }
+        public int Idx { get; set; }
+
+        private EntryWindow entryWindow;
 
         public SymbolListItem()
         {
             InitializeComponent();
         }
 
-        public void Set(Symbol symbol)
+        public void Set(Symbol symbol, int idx, EntryWindow window)
         {
             this.Symbol = symbol;
             symbol_title.Text = symbol.Name;
+            Idx = idx;
+            entryWindow = window;
         }
 
-        public void AddButtonListener(RoutedEventHandler handler)
+        private void Button_Remove(object sender, RoutedEventArgs e)
         {
-            btn_delete.Click += handler;
+            entryWindow.RemoveSymbol(Idx);
         }
     }
 }

@@ -17,9 +17,8 @@ namespace DreamNote
         private List<TextBlock> tbSymbols;
         public MainWindow()
         {
-            InitializeComponent();
-
             C = Container.GetInstance();
+            InitializeComponent();
 
             tbSymbols = ListOfSymbolTextBlocks();
 
@@ -60,7 +59,7 @@ namespace DreamNote
             if (C != null)
             {
                 List<Entry> entries = C.Entries;
-                entries.Sort((e1, e2) => DateTime.Compare(e1.Date, e2.Date));
+                //entries.Sort((e1, e2) => DateTime.Compare(e1.Date, e2.Date));
 
                 int max = entries.Count > 10 ? 10 : entries.Count;
 
@@ -112,6 +111,21 @@ namespace DreamNote
         private void Button_Click_more_symbols(object sender, RoutedEventArgs e)
         {
             SymbolListWindow symbolListWindow = new SymbolListWindow();
+            App.Current.MainWindow = symbolListWindow;
+            symbolListWindow.Show();
+            this.Close();
+        }
+
+        private void Symbol_Menu_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+            int idx = Int32.Parse((string)button.Tag);
+            TextBlock tb = tbSymbols[idx];
+            string symbolName = tb.Text;
+
+            SymbolListWindow symbolListWindow = new SymbolListWindow();
+            symbolListWindow.search_bar.Text = symbolName;
+            symbolListWindow.SearchSymbolByName();
             App.Current.MainWindow = symbolListWindow;
             symbolListWindow.Show();
             this.Close();
