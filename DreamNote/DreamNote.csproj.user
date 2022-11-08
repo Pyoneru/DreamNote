@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="AskSaveEntryWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Control\Entry.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -36,6 +39,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="AskSaveEntryWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Control\Entry.xaml">
       <SubType>Designer</SubType>
     </Page>
