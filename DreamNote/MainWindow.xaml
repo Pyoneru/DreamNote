@@ -125,7 +125,8 @@
                     Height="48"
                     Background="Transparent"
                     BorderBrush="Transparent"
-                    VerticalAlignment="Center">
+                    VerticalAlignment="Center"
+                    Click="Button_New_Entry">
                 <StackPanel>
                     <Image Width="42" 
                            Height="42" 

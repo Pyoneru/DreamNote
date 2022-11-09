@@ -28,7 +28,7 @@ namespace DreamNote
     {
         private Container C;
         private EntryGenerator generator;
-        private Model.Entry entry;
+        private Model.Entry? entry;
         private string password;
 
 
@@ -41,11 +41,23 @@ namespace DreamNote
 
             ClearEntry();
             this.entry = ReadEntry(entry, password);
-            InitializeEntry(this.entry);
+            if(this.entry != null)
+                InitializeEntry(this.entry);
 
         }
 
-        private Model.Entry ReadEntry(Model.Entry entry, string password)
+        protected override void OnRender(DrawingContext drawingContext)
+        {
+            if(entry == null)
+            {
+                MainWindow window = new MainWindow();
+                App.Current.MainWindow = window;
+                window.Show();
+                Close();
+            }
+        }
+
+        private Model.Entry? ReadEntry(Model.Entry entry, string password)
         {
             if (!string.IsNullOrEmpty(entry.Path))
             {
@@ -54,7 +66,7 @@ namespace DreamNote
 
                 if (readEntry != null)
                     return readEntry;
-                return new Model.Entry();
+                return null;
             }
             return entry;
         }
@@ -159,7 +171,13 @@ namespace DreamNote
             entry.Title = entry_title.Text;
             entry.Content = entry_content.Text;
             string path = generator.generate(entry, password);
-            C.Entries.Find(entry => entry.Path.Equals(path)).Title = entry.Title;
+            if(!string.IsNullOrEmpty(entry.Path)){
+                C.Entries.Find(entry => entry.Path.Equals(path)).Title = entry.Title;
+            }else
+            {
+                entry.Path = path;
+                C.Entries.Add(entry);
+            }
         }
     }
 }

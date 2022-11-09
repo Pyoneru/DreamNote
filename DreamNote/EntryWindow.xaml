@@ -60,15 +60,20 @@
                     </Grid.RowDefinitions>
                     
                     <!--Title-->
-                    <TextBox x:Name="entry_title" Grid.Row="0"
-                               Text="Title"
-                               VerticalAlignment="Bottom"
-                               HorizontalAlignment="Center"
-                               Foreground="#FFFFFF"
-                               Background="#2D2D2D"
-                               BorderThickness="0"
-                               FontSize="32"
-                               Margin="0,0,0,10"/>
+                    <TextBox
+                    x:Name="entry_title"
+                    MinWidth="200"
+                    Grid.Row="0"
+                    Text="Title"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Center"
+                    TextAlignment="Center"
+                    Foreground="#FFFFFF"
+                    Background="#2D2D2D"
+                    BorderBrush="#FFFFFF"
+                    BorderThickness="1"
+                    FontSize="32"
+                    Margin="0,0,0,10"/>
 
                     <!--Dashed line-->
                     <Rectangle Grid.Row="1" Stroke="#FFFFFF" Height="1" StrokeThickness="1" StrokeDashArray="4 4"                  SnapsToDevicePixels="True"
@@ -156,12 +161,14 @@ Nullam at nibh quis odio sodales pretium. In vitae elit arcu. Vestibulum vel tel
 
                     <TextBox x:Name="tb_symbol"
                         Grid.Row="1"
+                        MinWidth="100"
                         Background="Transparent"
                         TextAlignment="Center"
                         VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
                         FontSize="20"
                         Foreground="#FFFFFF"
-                             BorderBrush="Transparent"
+                             BorderBrush="#FFFFFF"
                         />
 
                     <Button x:Name="btn_add_symbol"

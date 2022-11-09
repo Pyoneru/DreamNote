@@ -130,5 +130,15 @@ namespace DreamNote
             symbolListWindow.Show();
             this.Close();
         }
+
+        // Button_New_Entry
+        private void Button_New_Entry(object sender, RoutedEventArgs e)
+        {
+            Entry entry = new Entry();
+            entry.Date = DateTime.Now;
+            //C.AddEntry(entry);
+            EntryPasswordWindow window = new EntryPasswordWindow(this, entry);
+            window.Show();
+        }
     }
 }
