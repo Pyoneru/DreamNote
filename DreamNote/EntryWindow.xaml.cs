@@ -176,7 +176,7 @@ namespace DreamNote
             }else
             {
                 entry.Path = path;
-                C.Entries.Add(entry);
+                C.AddEntry(entry);
             }
         }
     }
